@@ -1,0 +1,99 @@
+export default function TrendorixStore() { const products = [ { name: "Premium Panjabi", price: "৳699", image: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop", }, { name: "Smart Gadget", price: "৳1299", image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop", }, { name: "Luxury Perfume", price: "৳950", image: "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1200&auto=format&fit=crop", }, { name: "Drop Shoulder T-Shirt", price: "৳550", image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop", }, ];
+
+return ( <div className="min-h-screen bg-black text-white"> <header className="bg-gradient-to-r from-zinc-900 to-zinc-800 p-6 shadow-lg sticky top-0 z-50"> <div className="max-w-7xl mx-auto flex items-center justify-between"> <h1 className="text-3xl font-bold tracking-wide">Trendorix</h1> <a
+href="https://wa.me/8801967356473"
+className="bg-white text-black px-5 py-2 rounded-2xl font-semibold hover:scale-105 transition"
+> Order Now </a> </div> </header>
+
+<section className="relative overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40"></div>
+    <img
+      src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=1600&auto=format&fit=crop"
+      alt="banner"
+      className="w-full h-[500px] object-cover"
+    />
+    <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+      <div>
+        <h2 className="text-5xl font-extrabold mb-4">
+          Fashion • Gadgets • Perfume
+        </h2>
+        <p className="text-lg text-zinc-200 max-w-2xl mx-auto">
+          Premium quality products at affordable prices. Stylish clothing,
+          trendy gadgets & luxury perfumes in one place.
+        </p>
+        <a
+          href="https://wa.me/8801967356473"
+          className="inline-block mt-6 bg-white text-black px-8 py-3 rounded-2xl font-bold text-lg hover:scale-105 transition"
+        >
+          Shop Now
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section className="max-w-7xl mx-auto py-16 px-4">
+    <div className="flex items-center justify-between mb-8">
+      <h3 className="text-3xl font-bold">Featured Products</h3>
+      <span className="text-zinc-400">Premium Collection</span>
+    </div>
+
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {products.map((product, index) => (
+        <div
+          key={index}
+          className="bg-zinc-900 rounded-3xl overflow-hidden shadow-xl hover:-translate-y-2 transition duration-300"
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-72 object-cover"
+          />
+
+          <div className="p-5">
+            <h4 className="text-xl font-semibold mb-2">{product.name}</h4>
+            <p className="text-zinc-300 mb-4">{product.price}</p>
+
+            <a
+              href="https://wa.me/8801967356473"
+              className="block text-center bg-white text-black py-3 rounded-2xl font-semibold hover:bg-zinc-200 transition"
+            >
+              Order on WhatsApp
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section className="bg-zinc-900 py-16 px-4">
+    <div className="max-w-5xl mx-auto text-center">
+      <h3 className="text-4xl font-bold mb-4">Why Choose Trendorix?</h3>
+      <p className="text-zinc-300 text-lg leading-8">
+        ✔ Premium Quality Products <br />
+        ✔ Affordable Prices <br />
+        ✔ Fast Delivery All Over Bangladesh <br />
+        ✔ Trusted Online Shopping Experience
+      </p>
+    </div>
+  </section>
+
+  <footer className="bg-black py-10 text-center border-t border-zinc-800">
+    <h4 className="text-2xl font-bold mb-2">Trendorix</h4>
+    <p className="text-zinc-400 mb-4">
+      Clothing • Gadgets • Perfume Store
+    </p>
+
+    <a
+      href="https://wa.me/8801967356473"
+      className="inline-block bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+    >
+      WhatsApp: 01967356473
+    </a>
+
+    <p className="text-zinc-500 mt-6 text-sm">
+      © 2026 Trendorix. All rights reserved.
+    </p>
+  </footer>
+</div>
+
+); }
